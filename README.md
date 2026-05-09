@@ -1,7 +1,5 @@
 # Refusal in the Trajectory: Step-Direction Geometry Exposes and Amplifies DPO's Latent Refusal Alignment via Representation Steering Vectors
 
-> **ICML 2026 · Mechanistic Interpretability Workshop** · Under Review · Anonymous Submission
-
 ---
 
 ## Overview
