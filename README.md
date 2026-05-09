@@ -1,5 +1,7 @@
 # Refusal in the Trajectory: Step-Direction Geometry Exposes and Amplifies DPO's Latent Refusal Alignment via Representation Steering Vectors
 
+> **ICML 2026 · Mechanistic Interpretability Workshop** · Under Review · Anonymous Submission
+
 ---
 
 ## Overview
@@ -58,16 +60,14 @@ $$\tilde{h}^\ell = h^\ell_A + \alpha \cdot v^\text{safety}_\ell \quad \forall\,\
 
 | | |
 |---|---|
-| ![Fig 1 — θ diagnostic](figures/fig1_theta_diagnostic_v2.pdf) | ![Fig 2 — Steering results](figures/fig2_steering_results_v2.pdf) |
+| ![Fig 1 — θ diagnostic](figures/fig1_theta_diagnostic_v2.png) | ![Fig 2 — Steering results](figures/fig2_steering_results_v2.png) |
 | **Fig 1.** Step-direction angle θ per layer. Gap between safe and unsafe prompts peaks at L14 (Cohen's d = 1.66). Shaded band = steering window L12–16. | **Fig 2.** Multi-layer steering sweep: window × strength × behavioral validation. Only the θ-guided mid-layer band produces selective safety improvement. |
-| ![Fig 3 — Selectivity landscape](figures/fig3_selectivity_landscape.pdf) | ![Fig 4 — Headline comparison](figures/fig4_headline_comparison.pdf) |
+| ![Fig 3 — Selectivity landscape](figures/fig3_selectivity_landscape.png) | ![Fig 4 — Headline comparison](figures/fig4_headline_comparison.png) |
 | **Fig 3.** Selectivity landscape (unsafe refusal vs. safe over-refusal). Only θ-guided mid-layer windows reach the upper-left ideal zone. | **Fig 4.** LLM-judge verified results. L12–16 achieves 76% full refusal, nearly doubling DPO's 43%. L13–15 preserves 48% helpfulness. |
 
-![Fig 5 — Pipeline overview](figures/fig5_pipeline_overview.pdf)
+![Fig 5 — Pipeline overview](figures/fig5_pipeline_overview.png)
 
 **Fig 5.** The three-stage pipeline. Left: θ Cohen's d localizes the intervention window. Center: safety vector norms. Right: unsafe vs. safe refusal — mid-layer steering uniquely achieves high unsafe refusal with low safe over-refusal.
-
-> **Note:** GitHub does not render PDF previews inline. Clone the repo and open the PDFs directly, or see the paper for full-resolution figures.
 
 ---
 
@@ -175,11 +175,11 @@ python rtga_perprompt_and_mechinterp.py mechinterp \
 ```
 rtga/
 ├── figures/
-│   ├── fig1_theta_diagnostic_v2.pdf
-│   ├── fig2_steering_results_v2.pdf
-│   ├── fig3_selectivity_landscape.pdf
-│   ├── fig4_headline_comparison.pdf
-│   └── fig5_pipeline_overview.pdf
+│   ├── fig1_theta_diagnostic_v2.png
+│   ├── fig2_steering_results_v2.png
+│   ├── fig3_selectivity_landscape.png
+│   ├── fig4_headline_comparison.png
+│   └── fig5_pipeline_overview.png
 ├── representation_trajectory_geometry_of_alignment_V2.py   # Stage 1: θ diagnostic
 ├── rtga_steering.py                                         # Stage 2–3: extract + steer + judge
 ├── rtga_perprompt_and_mechinterp.py                         # Mechanistic analyses
