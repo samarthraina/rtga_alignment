@@ -1,7 +1,5 @@
 # Refusal in the Trajectory: Step-Direction Geometry Exposes and Amplifies DPO's Latent Refusal Alignment via Representation Steering Vectors
 
-> **ICML 2026 · Mechanistic Interpretability Workshop** · Under Review · Anonymous Submission
-
 ---
 
 ## Overview
@@ -202,21 +200,6 @@ rtga/
 
 ---
 
-## Citation
-
-```bibtex
-@inproceedings{anonymous2026rtga,
-  title     = {Refusal in the Trajectory: Step-Direction Geometry Exposes and
-               Amplifies DPO's Latent Refusal Alignment via Representation
-               Steering Vectors},
-  author    = {Anonymous Authors},
-  booktitle = {ICML Workshop on Mechanistic Interpretability},
-  year      = {2026},
-  note      = {Under review},
-}
-```
-
----
 
 ## Related Work
 
@@ -227,5 +210,3 @@ rtga/
 - Li et al. (NeurIPS 2023) — Inference-time intervention: Eliciting truthful answers
 
 ---
-
-*Preliminary work. Under review. Do not distribute.*
